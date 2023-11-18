@@ -1,51 +1,101 @@
-h1 {
-  font-size: 9rem;
-  font-weight: 600;
-  height: 8rem;
-  background: var(--red-to-pink-to-purple-horizontal-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: flex;
-  align-items: center;
-}
-
 .main {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-end;
-  right: 15%;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
   padding: 1rem;
   box-sizing: inherit;
   position: relative;
 }
 
-.content {
-  right: 0;
+.name {
+  padding: 10px;
 }
 
-.yves {
-  margin-right: 120px;
-  animation: fadeSlideTop 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards 0.5s;
+.name > div {
+  color: transparent;
+  font-size: 9rem;
+  font-weight: 600;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  // background: var(--red-to-pink-to-purple-horizontal-gradient);
+  background: var(--purple-to-pink-to-red-horizontal-gradient);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: fadeSlideLeft 1s cubic-bezier(0.18, 0.41, 0.54, 0.92) forwards 1s;
+  transform: translatex(100px);
   opacity: 0;
-  transform: translate(50px, -50px);
 }
 
-.molina {
-  animation: fadeSlideTop 2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards 0.5s;
+.occupation {
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.occupation > div {
+  color: transparent;
+  font-size: 9rem;
+  font-weight: 600;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--red-to-pink-to-purple-horizontal-gradient);
+  // background: var(--purple-to-pink-to-red-horizontal-gradient);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: fadeSlideRight 1s cubic-bezier(0.18, 0.41, 0.54, 0.92) forwards 1s;
   opacity: 0;
-  transform: translate(50px, 50px);
+  transform: translatex(100px);
 }
 
-@keyframes fadeSlideTop {
+@keyframes fadeSlideLeft {
   0% {
     opacity: 0;
-    transform: translate3d(50px, -50px);
+    transform: translatex(100px);
   }
   100% {
+    color: transparent;
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translatex(0);
   }
+}
+
+@keyframes fadeSlideRight {
+  0% {
+    opacity: 0;
+    transform: translatex(-100px);
+  }
+  100% {
+    color: transparent;
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: url("http://bgfons.com/uploads/gold/gold_texture464.jpg");
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.background > div {
+  flex: 1;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.foreground1 {
+  color: transparent;
 }
