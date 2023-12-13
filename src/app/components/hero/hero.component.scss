@@ -1,5 +1,11 @@
-.main {
+.container {
   height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,26 +22,16 @@
   overflow: hidden;
 }
 
-.left-description {
-  color: var(--zaffre-blue);
-  font-size: 2rem;
-  padding: 35px 40px 10px 40px;
-  overflow: hidden;
-  transform: translateY(100px);
-  animation: slideUp 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 2s forwards;
-}
-
-
 .left-content {
   display: flex;
   padding: 40px;
   > .letter {
     scale: 0;
-    color: var(--zaffre-blue);
+    color: var(--prussian-blue);
     animation: fadeSlideLeft 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    forwards;
+      forwards;
     animation-delay: 0s;
-    
+
     $delays: 10;
     @for $i from 1 through $delays {
       &.d-#{$i} {
@@ -45,12 +41,17 @@
   }
 }
 
+.left-description {
+  color: var(--fire-engine-red);
+  font-size: 2rem;
+  padding: 35px 40px 10px 40px;
+  overflow: hidden;
+  transform: translateY(100px);
+  animation: slideUp 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 2s forwards;
+}
+
 .right-title {
-  margin-right: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
+  margin-right: 25%;
 }
 
 .portrait-image {
@@ -58,25 +59,33 @@
   width: 200px;
   scale: 0.8;
   filter: blur(8px);
-  box-shadow: 1px 0px 33px 14px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 0px 33px 14px rgba(209, 194, 194, 0.75);
   animation: appear 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s forwards;
 }
 
 .arrow {
-  position: absolute;
-  bottom: 2%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
   cursor: pointer;
+  padding: 150px 0 95px;
+  transition: all 1s;
+  &:hover {
+    scale: 1.5;
+  }
+  &:hover > span {
+    border-bottom: 8px solid var(--orange-wheel);
+    border-right: 8px solid var(--orange-wheel);
+  }
 }
 
 .arrow span {
   display: block;
   width: 1.5vw;
   height: 1.5vw;
-  border-bottom: 8px solid var(--zaffre-blue);
-  border-right: 8px solid var(--zaffre-blue);
+  border-bottom: 8px solid var(--xanthous);
+  border-right: 8px solid var(--xanthous);
   transform: rotate(45deg);
+  transition: all 1s;
   margin: -10px;
   opacity: 0;
   animation: animate 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite 3s;
@@ -88,6 +97,10 @@
 
 .arrow span:nth-child(3) {
   animation-delay: 2.6s;
+}
+
+.hidden {
+  display: none;
 }
 
 @keyframes animate {
