@@ -1,101 +1,141 @@
 .main {
-  width: 100%;
-  min-height: 100vh;
+  height: 100dvh;
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  box-sizing: inherit;
-  position: relative;
 }
 
-.name {
-  padding: 10px;
-}
-
-.name > div {
-  color: transparent;
-  font-size: 9rem;
+.left-title {
+  margin-left: 12%;
+  font-size: 7rem;
   font-weight: 600;
-  height: 8rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-end;
-  // background: var(--red-to-pink-to-purple-horizontal-gradient);
-  background: var(--purple-to-pink-to-red-horizontal-gradient);
-  background-size: cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation: fadeSlideLeft 1s cubic-bezier(0.18, 0.41, 0.54, 0.92) forwards 1s;
-  transform: translatex(100px);
-  opacity: 0;
+  overflow: hidden;
 }
 
-.occupation {
-  padding: 10px; /* Adjust padding as needed */
+.left-description {
+  color: var(--zaffre-blue);
+  font-size: 2rem;
+  padding: 35px 40px 10px 40px;
+  overflow: hidden;
+  transform: translateY(100px);
+  animation: slideUp 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 2s forwards;
 }
 
-.occupation > div {
-  color: transparent;
-  font-size: 9rem;
-  font-weight: 600;
-  height: 8rem;
+
+.left-content {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background: var(--red-to-pink-to-purple-horizontal-gradient);
-  // background: var(--purple-to-pink-to-red-horizontal-gradient);
-  background-size: cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation: fadeSlideRight 1s cubic-bezier(0.18, 0.41, 0.54, 0.92) forwards 1s;
+  padding: 40px;
+  > .letter {
+    scale: 0;
+    color: var(--zaffre-blue);
+    animation: fadeSlideLeft 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    forwards;
+    animation-delay: 0s;
+    
+    $delays: 10;
+    @for $i from 1 through $delays {
+      &.d-#{$i} {
+        animation-delay: $i * 150ms;
+      }
+    }
+  }
+}
+
+.right-title {
+  margin-right: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.portrait-image {
   opacity: 0;
-  transform: translatex(100px);
+  width: 200px;
+  scale: 0.8;
+  filter: blur(8px);
+  box-shadow: 1px 0px 33px 14px rgba(0, 0, 0, 0.75);
+  animation: appear 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s forwards;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 1.5vw;
+  height: 1.5vw;
+  border-bottom: 8px solid var(--zaffre-blue);
+  border-right: 8px solid var(--zaffre-blue);
+  transform: rotate(45deg);
+  margin: -10px;
+  opacity: 0;
+  animation: animate 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite 3s;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: 2.8s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: 2.6s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
 }
 
 @keyframes fadeSlideLeft {
   0% {
-    opacity: 0;
-    transform: translatex(100px);
+    transform: translatex(20px);
   }
+  20% {
+    transform: translatex(140px);
+  }
+
   100% {
-    color: transparent;
-    opacity: 1;
+    scale: 1;
     transform: translatex(0);
   }
 }
 
-@keyframes fadeSlideRight {
+@keyframes appear {
   0% {
-    opacity: 0;
-    transform: translatex(-100px);
+    scale: 0.8;
+    box-shadow: 1px 0px 24px 1px rgba(125, 125, 125, 1);
   }
   100% {
-    color: transparent;
+    filter: blur(0px);
     opacity: 1;
-    transform: translatex(0);
+    scale: 1;
+    box-shadow: 1px 0px 24px 1px rgba(125, 125, 125, 1);
   }
 }
 
-.background {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background: url("http://bgfons.com/uploads/gold/gold_texture464.jpg");
-  background-size: cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-.background > div {
-  flex: 1;
-  font-size: 3em;
-  font-weight: bold;
-  text-align: center;
-}
-
-.foreground1 {
-  color: transparent;
+@keyframes slideUp {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

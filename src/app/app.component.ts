@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { Engine } from 'tsparticles-engine';
+import { MoveDirection, ClickMode, HoverMode, OutMode } from "tsparticles-engine";
+//import { loadFull } from "tsparticles";
 
 @Component({
   selector: 'app-root',
@@ -11,4 +14,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'portfolio-v2';
+  
 }
