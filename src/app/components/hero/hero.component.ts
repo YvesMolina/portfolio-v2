@@ -9,17 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [CommonModule, MatButtonModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
-  animations: [
-    trigger('fadeOut', [
-      state('visible', style({ opacity: 1 })),
-      transition(':leave', [
-        animate('0.5s', style({ opacity: 0 }))
-      ]),
-    ]),
-  ],
 })
 export class HeroComponent {
-  arrowAnimationState = 'visible';
 
   @HostListener('wheel', ['$event'])
   onWheel(event: WheelEvent) {
@@ -31,7 +22,6 @@ export class HeroComponent {
   scrollToComponent(component: string) {
     const element = document.getElementById(component);
     if (element) {
-      this.arrowAnimationState = 'hidden';
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }

@@ -1,0 +1,44 @@
+<mat-toolbar class="toolbar">
+  <button
+    mat-button
+    class="title"
+    aria-label="Example icon-button with menu icon"
+    (click)="scrollToComponent('hero')"
+  >
+  {{ 'Yves Molina' | uppercase }}
+
+  </button>
+  <span class="example-spacer"></span>
+  <button
+    mat-button
+    class="nav-button"
+    aria-label="About text button that links to the about page"
+    (click)="scrollToComponent('hero')"
+  >
+    {{ "Home" | uppercase }}
+  </button>
+  <button
+    mat-button
+    class="nav-button"
+    aria-label="About text button that links to the about page"
+    (click)="scrollToComponent('about')"
+  >
+    {{ "About" | uppercase }}
+  </button>
+  <button
+    mat-button
+    class="nav-button"
+    aria-label="Projects text button that links to the projects page"
+    (click)="scrollToComponent('projects')"
+  >
+    {{ "Projects" | uppercase }}
+  </button>
+  <button
+    mat-button
+    class="nav-button"
+    aria-label="Projects text button that links to the projects page"
+    (click)="scrollToComponent('projects')"
+  >
+    {{ "Contact" | uppercase }}
+  </button>
+</mat-toolbar>

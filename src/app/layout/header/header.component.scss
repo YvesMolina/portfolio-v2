@@ -1,0 +1,20 @@
+.toolbar {
+  background-color: transparent;
+  padding: 50px;
+  position: absolute;
+  top: 0%;
+  color: var(--prussian-blue);
+}
+
+.title {
+  font-size: 26px;
+}
+
+.nav-button {
+  font-size: 20px;
+  padding: 0 15px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
