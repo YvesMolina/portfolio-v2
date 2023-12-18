@@ -2,77 +2,25 @@ import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 const cards = [
   {
-    url: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    title: 'Image 1',
-    projectUrl: 'https://angular.io',
+    url: 'https://i.ibb.co/W3vvBMZ/broad-img.png',
+    title: 'Broadconstruction',
+    shortProjectUrl: 'broadconstruction.com',
+    projectUrl: 'https://broadconstruction-demo.netlify.app/',
     alt: 'Image of a shiba inu',
   },
   {
-    url: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+    url: 'https://i.ibb.co/W3vvBMZ/broad-img.png',
     title: 'Image 2',
     projectUrl: 'https://angular.io',
     alt: 'Image of a shiba inu',
   },
   {
-    url: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+    url: 'https://i.ibb.co/W3vvBMZ/broad-img.png',
     title: 'Image 3',
-    projectUrl: 'https://angular.io',
-    alt: 'Image of a shiba inu',
-  },
-  {
-    url: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    title: 'Image 4',
-    projectUrl: 'https://angular.io',
-    alt: 'Image of a shiba inu',
-  },
-  {
-    url: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    title: 'Image 1',
-    projectUrl: 'https://angular.io',
-    alt: 'Image of a shiba inu',
-  },
-  {
-    url: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    title: 'Image 2',
-    projectUrl: 'https://angular.io',
-    alt: 'Image of a shiba inu',
-  },
-  {
-    url: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    title: 'Image 3',
-    projectUrl: 'https://angular.io',
-    alt: 'Image of a shiba inu',
-  },
-  {
-    url: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    title: 'Image 4',
-    projectUrl: 'https://angular.io',
-    alt: 'Image of a shiba inu',
-  },
-  {
-    url: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    title: 'Image 1',
-    projectUrl: 'https://angular.io',
-    alt: 'Image of a shiba inu',
-  },
-  {
-    url: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    title: 'Image 2',
-    projectUrl: 'https://angular.io',
-    alt: 'Image of a shiba inu',
-  },
-  {
-    url: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    title: 'Image 3',
-    projectUrl: 'https://angular.io',
-    alt: 'Image of a shiba inu',
-  },
-  {
-    url: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    title: 'Image 4',
     projectUrl: 'https://angular.io',
     alt: 'Image of a shiba inu',
   },
@@ -81,7 +29,7 @@ const cards = [
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, MatGridListModule, MatCardModule],
+  imports: [CommonModule, MatGridListModule, MatCardModule, MatButtonModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })

@@ -1,9 +1,12 @@
 .toolbar {
+  z-index: 9;
   background-color: transparent;
+  opacity: 0;
   padding: 50px;
-  position: absolute;
+  position: fixed;
   top: 0%;
   color: var(--prussian-blue);
+  animation: fadeIn 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 3s forwards;
 }
 
 .title {
@@ -17,4 +20,13 @@
 
 .example-spacer {
   flex: 1 1 auto;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;;
+  }
+  100% {
+    opacity: 1;
+  }
 }
