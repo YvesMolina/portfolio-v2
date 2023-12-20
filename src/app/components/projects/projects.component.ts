@@ -31,22 +31,24 @@ export class ProjectsComponent {
 
 const cards = [
   {
-    url: 'https://i.ibb.co/W3vvBMZ/broad-img.png',
+    url: 'https://i.ibb.co/9ypK5Wk/broad.png',
     title: 'Broadconstruction',
-    shortProjectUrl: 'broadconstruction.com',
+    shortProjectUrl: 'broadconstruction.co.uk',
     projectUrl: 'https://broadconstruction-demo.netlify.app/',
-    alt: 'Image of a shiba inu',
+    alt: 'image of broad construction logo',
   },
   {
-    url: 'https://i.ibb.co/W3vvBMZ/broad-img.png',
-    title: 'Image 2',
-    projectUrl: 'https://angular.io',
-    alt: 'Image of a shiba inu',
+    url: 'https://i.ibb.co/1RMvFPN/kolth.png',
+    title: 'Kolth Technologies',
+    shortProjectUrl: 'kolthtechnologies.fr',
+    projectUrl: 'https://kolthtechnologies.fr/',
+    alt: 'image of kolth technologies logo',
   },
   {
-    url: 'https://i.ibb.co/W3vvBMZ/broad-img.png',
-    title: 'Image 3',
-    projectUrl: 'https://angular.io',
-    alt: 'Image of a shiba inu',
+    url: 'https://i.ibb.co/FJkRzcm/hbf.png',
+    title: 'HBF Group App',
+    shortProjectUrl: 'groupehbf.com',
+    projectUrl: 'https://groupehbf.com/',
+    alt: 'image of hbf group logo',
   },
 ];
