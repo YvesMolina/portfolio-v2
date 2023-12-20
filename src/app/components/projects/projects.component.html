@@ -1,0 +1,21 @@
+<div id="projects" class="container">
+  <div class="title">PROJECTS</div>
+  <div class="description">
+    Websites, web apps and work I've taken in the past
+  </div>
+  <div class="content">
+    <div class="row-wrap">
+      <div class="flex" *ngFor="let card of cards">
+        <mat-card class="card">
+          <img mat-card-image class="card-img" [src]="card.url" />
+          <mat-card-content class="card-content">
+            <div class="card-title">{{ card.title }}</div>
+            <a mat-button class="card-project-url" [href]="card.projectUrl">{{
+              card.shortProjectUrl
+            }}</a>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
