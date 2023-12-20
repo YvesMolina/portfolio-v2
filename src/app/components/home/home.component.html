@@ -1,3 +1,10 @@
-<app-hero></app-hero>
-<app-about></app-about>
-<app-projects></app-projects>
+<div class="activeTarget">The active target is: {{ activeTarget }}</div>
+<app-hero (activeTargetChange)="changeActiveTarget($event)"></app-hero>
+<app-about (activeTargetChange)="changeActiveTarget($event)"></app-about>
+<app-projects (activeTargetChange)="changeActiveTarget($event)"></app-projects>
+<div class="sidebar">
+  <span spyOn="hero" activeClass="active"></span>
+  <span spyOn="target-2" activeClass="active"></span>
+  <span spyOn="target-3" activeClass="active"></span>
+  <span spyOn="target-4" activeClass="active"></span>
+</div>

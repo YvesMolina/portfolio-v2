@@ -1,0 +1,23 @@
+.activeTarget {
+  position: fixed;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 2%;
+  bottom: 25%;
+  span {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background-color: var(--gray-900);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.active {
+    background-color: red;
+}

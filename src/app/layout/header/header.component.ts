@@ -11,10 +11,13 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+
+  currentSection = '';
   scrollToComponent(component: string) {
     const element = document.getElementById(component);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
 }

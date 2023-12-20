@@ -1,1 +1,0 @@
-# generate a function that multiplies a number by 2
