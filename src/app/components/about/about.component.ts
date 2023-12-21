@@ -3,13 +3,27 @@ import { CommonModule } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, MatGridListModule, MatCardModule, MatButtonModule],
+  imports: [
+    CommonModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
+  ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
+  animations: []
 })
 export class AboutComponent {
   @HostListener('wheel', ['$event'])

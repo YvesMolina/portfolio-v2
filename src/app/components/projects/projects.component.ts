@@ -16,9 +16,9 @@ export class ProjectsComponent {
     if (event.deltaY < 0) {
       this.scrollToComponent('about');
     }
-    // if (event.deltaY > 0) {
-    //   this.scrollToComponent('projects');
-    // }
+    if (event.deltaY > 0) {
+      this.scrollToComponent('contact');
+    }
   }
 
   scrollToComponent(component: string) {
