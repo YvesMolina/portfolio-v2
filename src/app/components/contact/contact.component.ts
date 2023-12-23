@@ -46,20 +46,32 @@ export class ContactComponent {
   }
 
   sendEmail() {
-    const emailForm = this.emailForm
+    const form = JSON.stringify(this.emailForm.value);
+    console.log('%c⧭', 'color: #0088cc', this.emailForm);
+
+
     emailjs
       .sendForm(
         'service_1srs32e',
         'template_jf8b3tj',
+        form,
         '6bmhHNbsejSymRbrl'
       )
       .then(
         (result: EmailJSResponseStatus) => {
+          console.log('%c⧭', 'color: #00b300', "valid");
           console.log(result.text);
         },
         (error) => {
+          console.log('%c⧭', 'color: #ffa640', "err");
           console.log(error.text);
         }
       );
   }
+
+  onSubmit() {
+
+    console.log('%c⧭', 'color: #1d5673', "submitted");
+  }
+
 }

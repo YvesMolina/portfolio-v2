@@ -6,7 +6,7 @@
         Have a question, proposal, or want to say hello? Get in touch with me
       </div>
     </div>
-    <div class="form" [formGroup]="emailForm">
+    <form class="form" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
       <div class="contact-info">
         <mat-form-field class="contact-input">
           <mat-label>Name</mat-label>
@@ -29,12 +29,19 @@
       <mat-form-field class="text-area">
         <mat-label>Message</mat-label>
         <textarea matInput formControlName="message"></textarea>
+        <mat-error *ngIf="emailForm.get('message')?.hasError('required')">
+          Message is required
+        </mat-error>
       </mat-form-field>
-    </div>
-    <div class="send-button" (click)="sendEmail()">
-      <button mat-stroked-button [disabled]="!emailForm.invalid" color="primary">
-        Send
-      </button>
-    </div>
+      <div class="send-button" (click)="sendEmail()">
+        <button
+          mat-stroked-button
+          [disabled]="!emailForm.invalid"
+          color="primary"
+        >
+          Send
+        </button>
+      </div>
+    </form>
   </div>
 </div>
