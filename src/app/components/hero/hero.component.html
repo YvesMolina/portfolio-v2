@@ -1,28 +1,80 @@
 <div id="hero" class="container">
-  <div class="content">
-    <div class="left-title">
-      <div class="left-content">
-        <div class="letter d-1">Y</div>
-        <div class="letter d-2">v</div>
-        <div class="letter d-3">e</div>
-        <div class="letter d-4">s</div>
+  <div class="sub-container">
+    <div
+      class="content"
+      [ngClass]="{ 'content-portrait': isTabletPortrait || isHandsetPortrait }"
+    >
+      <div
+        class="left-title"
+        [ngClass]="{
+          'left-title-tablet-portrait': isTabletPortrait,
+          'left-title-tablet-landscape': isTabletLandscape,
+          'left-title-handset-portrait': isHandsetPortrait,
+          'left-title-handset-landscape': isHandsetLandscape
+        }"
+      >
+        <div
+          class="left-content"
+          [ngClass]="{
+            'left-content-tablet-portrait': isTabletPortrait,
+            'left-content-tablet-landscape': isTabletLandscape,
+            'left-content-handset-portrait': isHandsetPortrait,
+            'left-content-handset-landscape': isHandsetLandscape
+          }"
+        >
+          <div class="letter d-1">Y</div>
+          <div class="letter d-2">v</div>
+          <div class="letter d-3">e</div>
+          <div class="letter d-4">s</div>
+        </div>
+        <div
+          class="left-content"
+          [ngClass]="{
+            'left-content-tablet-portrait': isTabletPortrait,
+            'left-content-tablet-landscape': isTabletLandscape,
+            'left-content-handset-portrait': isHandsetPortrait,
+            'left-content-handset-landscape': isHandsetLandscape
+          }"
+        >
+          <div class="letter d-5">M</div>
+          <div class="letter d-6">o</div>
+          <div class="letter d-7">l</div>
+          <div class="letter d-8">i</div>
+          <div class="letter d-9">n</div>
+          <div class="letter d-10">a</div>
+        </div>
+        <div
+          class="left-description"
+          [ngClass]="{
+            'left-description-tablet-portrait': isTabletPortrait,
+            'left-description-tablet-landscape': isTabletLandscape,
+            'left-description-handset-portrait': isHandsetPortrait,
+            'left-description-handset-landscape': isHandsetLandscape
+          }"
+          i18n
+        >
+          Développeur Web
+        </div>
       </div>
-      <div class="left-content">
-        <div class="letter d-5">M</div>
-        <div class="letter d-6">o</div>
-        <div class="letter d-7">l</div>
-        <div class="letter d-8">i</div>
-        <div class="letter d-9">n</div>
-        <div class="letter d-10">a</div>
+      <div
+        class="right-title"
+        [ngClass]="{
+          'right-title-portrait': isTabletPortrait || isHandsetPortrait
+        }"
+      >
+        <img
+          class="portrait-image"
+          [ngClass]="{
+            'portrait-image-tablet-portrait': isTabletPortrait,
+            'portrait-image-tablet-landscape': isTabletLandscape,
+            'portrait-image-handset-portrait': isHandsetPortrait,
+            'portrait-image-handset-landscape': isHandsetLandscape
+          }"
+          src="https://i.ibb.co/MnsdtRK/1-small.jpg"
+          alt="photographie portrait de Yves Molina"
+          i18n-alt
+        />
       </div>
-      <div class="left-description">Web Developer</div>
-    </div>
-    <div class="right-title">
-      <img
-        class="portrait-image"
-        src="https://i.ibb.co/MnsdtRK/1-small.jpg"
-        alt=""
-      />
     </div>
   </div>
   <div class="arrow" (click)="scrollToComponent('about')">

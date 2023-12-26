@@ -18,10 +18,10 @@ body {
 
 :root {
   --background-color: #f5f5f7;
-  --primary-color: #1D1D1F;
-  --secondary-color: #0066CC;
-  --accent-color: #4CB963;
-  --accent-light: #CC6600;
+  --primary-color: #1d1d1f;
+  --secondary-color: #0066cc;
+  --accent-color: #4cb963;
+  --accent-light: #cc6600;
   --vanilla: #eae2b7;
 
   --gray-900: #2b2b2b;
@@ -43,4 +43,12 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.mat-mdc-snack-bar-container {
+  &.blue-snackbar {
+    --mdc-snackbar-container-color: var(--secondary-color);
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mdc-snackbar-supporting-text-color: #fff;
+  }
 }

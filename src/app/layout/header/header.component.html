@@ -1,43 +1,109 @@
-<mat-toolbar class="toolbar">
-  <button
-    mat-button
-    class="title"
-    aria-label="Example icon-button with menu icon"
-    (click)="scrollToComponent('hero')"
-  >
-    {{ "Yves Molina" | uppercase }}
-  </button>
-  <span class="example-spacer"></span>
-  <button
-    mat-button
-    class="nav-button"
-    aria-label="About text button that links to the about page"
-    (click)="scrollToComponent('hero')"
-  >
-    {{ "Home" | uppercase }}
-  </button>
-  <button
-    mat-button
-    class="nav-button"
-    aria-label="About text button that links to the about page"
-    (click)="scrollToComponent('about')"
-  >
-    {{ "About" | uppercase }}
-  </button>
-  <button
-    mat-button
-    class="nav-button"
-    aria-label="Projects text button that links to the projects page"
-    (click)="scrollToComponent('projects')"
-  >
-    {{ "Projects" | uppercase }}
-  </button>
-  <button
-    mat-button
-    class="nav-button"
-    aria-label="Projects text button that links to the projects page"
-    (click)="scrollToComponent('contact')"
-  >
-    {{ "Contact" | uppercase }}
-  </button>
+<div
+  class="toolbar-background"
+  [ngClass]="{
+    'show-background':
+      isBackgroundVisible || isHandsetPortrait || isTabletPortrait,
+    'toolbar-background-tablet-landscape': isTabletLandscape,
+    'toolbar-background-handset-landscape': isHandsetLandscape,
+    'toolbar-background-tablet-portrait': isTabletPortrait,
+    'toolbar-background-handset-portrait': isHandsetPortrait,
+    'show-full-background': menuToggled
+  }"
+></div>
+<mat-toolbar class="toolbar" [ngClass]="{ 'toolbar-white': menuToggled || isBackgroundVisible }">
+  <div class="toolbar-retracted">
+    <button
+      mat-button
+      class="title"
+      aria-label="Bouton d'exemple avec icône de menu"
+      (click)="scrollToComponent('hero')"
+    >
+      {{ "Yves Molina" | uppercase }}
+    </button>
+    <span class="example-spacer"></span>
+    <div class="buttons" *ngIf="!isHandsetPortrait && !isTabletPortrait">
+      <button
+        mat-button
+        class="nav-button"
+        aria-label="Bouton texte Accueil qui mène à la page d'accueil"
+        (click)="scrollToComponent('hero')"
+        i18n
+      >
+        ACCUEIL
+      </button>
+      <button
+        mat-button
+        class="nav-button"
+        aria-label="Bouton texte À propos qui mène à la page À propos"
+        (click)="scrollToComponent('about')"
+        i18n
+      >
+        À PROPOS
+      </button>
+      <button
+        mat-button
+        class="nav-button"
+        aria-label="Bouton texte Projets qui mène à la page Projets"
+        (click)="scrollToComponent('projects')"
+        i18n
+      >
+        PROJETS
+      </button>
+      <button
+        mat-button
+        class="nav-button"
+        aria-label="Bouton texte Contact qui mène à la page Contact"
+        (click)="scrollToComponent('contact')"
+        i18n
+      >
+        CONTACT
+      </button>
+    </div>
+    <button
+      mat-icon-button
+      *ngIf="isHandsetPortrait || isTabletPortrait"
+      (click)="toggleMenu()"
+    >
+      <mat-icon class="icon">menu</mat-icon>
+    </button>
+  </div>
+  <div class="menu" *ngIf="menuToggled">
+    <div class="menu-button" @fadeIn>
+      <button
+        mat-button
+        class="menu-item"
+        (click)="toggleMenu(); scrollToComponent('hero')"
+      >
+        Home
+      </button>
+    </div>
+    <div class="menu-button" @fadeIn2>
+      <button
+        mat-button
+        class="menu-item"
+        (click)="toggleMenu(); scrollToComponent('about')"
+      >
+        About
+      </button>
+    </div>
+    <div class="menu-button" @fadeIn3>
+      <button
+        mat-button
+        class="menu-item"
+        (click)="toggleMenu(); scrollToComponent('projects')"
+      >
+        Projects
+      </button>
+    </div>
+    <div class="menu-button" @fadeIn4>
+      <button
+        mat-button
+        class="menu-item"
+        routerLink="/contact"
+        (click)="toggleMenu(); scrollToComponent('contact')"
+      >
+        Contact
+      </button>
+    </div>
+  </div>
 </mat-toolbar>

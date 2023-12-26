@@ -11,21 +11,53 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [
-    CommonModule,
-    MatGridListModule,
-    MatCardModule,
-    MatButtonModule,
-  ],
+  imports: [CommonModule, MatGridListModule, MatCardModule, MatButtonModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
-  animations: []
+  animations: [],
 })
 export class AboutComponent {
+  public isTabletPortrait = false;
+  public isTabletLandscape = false;
+  public isHandsetPortrait = false;
+  public isHandsetLandscape = false;
+
+  constructor(private responsive: BreakpointObserver) {}
+
+  ngOnInit() {
+    this.responsive
+      .observe([
+        Breakpoints.TabletPortrait,
+        Breakpoints.TabletLandscape,
+        Breakpoints.HandsetPortrait,
+        Breakpoints.HandsetLandscape,
+      ])
+      .subscribe((result) => {
+        const breakpoints = result.breakpoints;
+
+        // Reset all breakpoints to false
+        this.isTabletPortrait = false;
+        this.isTabletLandscape = false;
+        this.isHandsetPortrait = false;
+        this.isHandsetLandscape = false;
+
+        if (breakpoints[Breakpoints.TabletPortrait]) {
+          this.isTabletPortrait = true;
+        } else if (breakpoints[Breakpoints.TabletLandscape]) {
+          this.isTabletLandscape = true;
+        } else if (breakpoints[Breakpoints.HandsetPortrait]) {
+          this.isHandsetPortrait = true;
+        } else if (breakpoints[Breakpoints.HandsetLandscape]) {
+          this.isHandsetLandscape = true;
+        }
+      });
+  }
+
   @HostListener('wheel', ['$event'])
   onWheel(event: WheelEvent) {
     if (event.deltaY < 0) {

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './layout/header/header.component';
-//import { loadFull } from "tsparticles";
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -13,5 +13,8 @@ import { HeaderComponent } from './layout/header/header.component';
 })
 export class AppComponent {
   title = 'portfolio-v2';
+  constructor(private titleService: Title) {
+    this.titleService.setTitle($localize`${this.title}`)
+  }
 
 }

@@ -1,45 +1,52 @@
 <div id="contact" class="container">
   <div class="content">
     <div class="title">
-      <div class="main-title">{{ "Contact" | uppercase }}</div>
-      <div class="sub-title">
-        Have a question, proposal, or want to say hello? Get in touch with me
+      <div class="main-title" i18n>{{ "Contact" | uppercase }}</div>
+      <div class="sub-title" i18n>
+        Vous avez une question, une proposition ou vous voulez simplement dire
+        bonjour ? Contactez-moi.
       </div>
     </div>
-    <form class="form" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+    <form
+      class="form"
+      [formGroup]="emailForm"
+      (ngSubmit)="onSubmit(formDirective)"
+      #formDirective="ngForm"
+    >
       <div class="contact-info">
         <mat-form-field class="contact-input">
-          <mat-label>Name</mat-label>
+          <mat-label i18n>Nom</mat-label>
           <input matInput formControlName="name" />
-          <mat-error *ngIf="emailForm.get('name')?.hasError('required')">
-            Name is required
+          <mat-error *ngIf="emailForm.get('name')?.hasError('required')" i18n>
+            Le nom est requis
           </mat-error>
         </mat-form-field>
         <mat-form-field class="contact-input">
-          <mat-label>Email address</mat-label>
+          <mat-label i18n>Adresse e-mail</mat-label>
           <input matInput formControlName="email" />
-          <mat-error *ngIf="emailForm.get('email')?.hasError('required')">
-            Email is required
+          <mat-error *ngIf="emailForm.get('email')?.hasError('required')" i18n>
+            L'adresse e-mail est requise
           </mat-error>
-          <mat-error *ngIf="emailForm.get('email')?.hasError('email')">
-            Invalid email format
+          <mat-error *ngIf="emailForm.get('email')?.hasError('email')" i18n>
+            Format d'e-mail invalide
           </mat-error>
         </mat-form-field>
       </div>
       <mat-form-field class="text-area">
-        <mat-label>Message</mat-label>
+        <mat-label i18n>Message</mat-label>
         <textarea matInput formControlName="message"></textarea>
-        <mat-error *ngIf="emailForm.get('message')?.hasError('required')">
-          Message is required
+        <mat-error *ngIf="emailForm.get('message')?.hasError('required')" i18n>
+          Le message est requis
         </mat-error>
       </mat-form-field>
-      <div class="send-button" (click)="sendEmail()">
+      <div class="send-button">
         <button
           mat-stroked-button
-          [disabled]="!emailForm.invalid"
+          [disabled]="emailForm.invalid"
           color="primary"
+          i18n
         >
-          Send
+          Envoyer
         </button>
       </div>
     </form>

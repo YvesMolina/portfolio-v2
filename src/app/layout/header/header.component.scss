@@ -1,12 +1,24 @@
 .toolbar {
   z-index: 9;
   background-color: transparent;
-  // opacity: 0;
-  padding: 50px;
+  opacity: 0;
+  padding: 50px 25px;
   position: fixed;
   top: 0%;
   color: var(--prussian-blue);
-  // animation: fadeIn 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 3s forwards;
+  animation: fadeIn 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 3s forwards;
+  transition: all 0.5s ease-in-out;
+}
+
+.toolbar-retracted {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.toolbar-white {
+  transition: all 0.5s ease-in-out;
+  color: white;
 }
 
 .title {
@@ -21,10 +33,59 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+.menu {
+  position: absolute;
+  top: 200%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  border-bottom: solid rgb(109, 109, 109) 1px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.menu-item {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 2rem;
+}
+
+.toolbar-background {
+  position: fixed;
+  top: -100dvh; /* Move the background above the viewport initially */
+  left: 0;
+  width: 100%;
+  height: 100dvh; /* Adjust the height based on your toolbar height */
+  background-color: rgba(43, 43, 43, 0.7);
+  z-index: 8; /* Make sure the background is behind the toolbar (z-index: 9) */
+  transition: transform 500ms cubic-bezier(0.62, 0, 0.37, 0.95);
+  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+}
+
+.show-background {
+  transform: translateY(
+    12.2dvh
+  ); /* Slide the background down by the height of the toolbar */
+}
+
+.show-full-background {
+  transform: translateY(
+    100dvh
+  ); /* Slide the background down by the height of the toolbar */
+}
+.icon {
+  color: white;
+  scale: 1.4;
+}
 
 @keyframes fadeIn {
   0% {
-    opacity: 0;;
+    opacity: 0;
   }
   100% {
     opacity: 1;

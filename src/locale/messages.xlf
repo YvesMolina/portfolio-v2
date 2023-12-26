@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr-FR" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1737753151350322492" datatype="html">
+        <source><x id="PH" equiv-text="this.title"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7829789798710976914" datatype="html">
+        <source>À PROPOS DE MOI</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6530591446424472236" datatype="html">
+        <source> Je suis un   <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div class=&quot;accent&quot;&gt;"/>Ingénieur Logiciel<x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/> ,   <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div class=&quot;accent&quot;&gt;"/>Développeur Frontend<x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>   et   <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div class=&quot;accent&quot;&gt;"/>Expert Angular<x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">5,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6488981942618988631" datatype="html">
+        <source> Diplômé d&apos;un Master en Génie Informatique en 2024, j&apos;apporte deux années d&apos;expérience pratique en tant que développeur web chez <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Capgemini<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>. Pendant cette période, j&apos;ai travaillé en tant que <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Développeur Full Stack<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> pour une entreprise <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>aérospatiale<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> à Toulouse, spécialisé dans <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Angular<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> en frontend et <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Node.js<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> en backend. Mes responsabilités incluaient la gestion de bases de données avec MongoDB et MariaDB, la mise en œuvre de la conteneurisation avec Docker, et l&apos;orchestration des déploiements <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>DevOps<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> avec des clusters Kubernetes OpenShift. <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br /&gt;"/> Parallèlement, j&apos;ai été actif en tant que <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>développeur indépendant<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>, créant des sites web et des applications web, et contribuant à des projets open source, démontrant un engagement envers l&apos;apprentissage continu et l&apos;application pratique de mes compétences. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about/about.component.html</context>
+          <context context-type="linenumber">13,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="187187500641108332" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ &quot;Contact&quot; | uppercase }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8887893300920564116" datatype="html">
+        <source> Vous avez une question, une proposition ou vous voulez simplement dire bonjour ? Contactez-moi. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5363451304863092478" datatype="html">
+        <source>Nom</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2887235859764109701" datatype="html">
+        <source> Le nom est requis </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3053022756258517667" datatype="html">
+        <source>Adresse e-mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9189059540544562237" datatype="html">
+        <source> L&apos;adresse e-mail est requise </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5636437974512254667" datatype="html">
+        <source> Format d&apos;e-mail invalide </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8066608938393600549" datatype="html">
+        <source>Message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7590871133082445789" datatype="html">
+        <source> Le message est requis </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7534537910001894809" datatype="html">
+        <source> Envoyer </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3443034350686975292" datatype="html">
+        <source>Développeur Web</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/hero/hero.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3419095174824502426" datatype="html">
+        <source>photographie portrait de Yves Molina</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/hero/hero.component.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1465736734804610010" datatype="html">
+        <source>PROJETS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/projects/projects.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6783954579885640546" datatype="html">
+        <source> Sites web et applications que j&apos;ai réalisés précédemment </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/projects/projects.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7090414150540898174" datatype="html">
+        <source> ACCUEIL </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3546806108492918507" datatype="html">
+        <source> À PROPOS </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3524706932121040644" datatype="html">
+        <source> PROJETS </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7576099447812787880" datatype="html">
+        <source> CONTACT </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/header/header.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
