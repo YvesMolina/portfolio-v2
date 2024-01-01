@@ -30,7 +30,6 @@ export class ProjectsComponent {
       .subscribe((result) => {
         const breakpoints = result.breakpoints;
 
-        // Reset all breakpoints to false
         this.isTabletPortrait = false;
         this.isTabletLandscape = false;
         this.isHandsetPortrait = false;
@@ -53,6 +52,10 @@ export class ProjectsComponent {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  navigateToUrl(url: string) {
+    window.open(url, '_blank');
   }
 }
 

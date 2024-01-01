@@ -37,16 +37,12 @@ export class HeroComponent {
 
         if (breakpoints[Breakpoints.TabletPortrait]) {
           this.isTabletPortrait = true;
-          console.log('%c⧭', 'color: #1d5673', 'this.isTabletPortrait');
         } else if (breakpoints[Breakpoints.TabletLandscape]) {
           this.isTabletLandscape = true;
-          console.log('%c⧭', 'color: #f200e2', 'this.isTabletLandscape');
         } else if (breakpoints[Breakpoints.HandsetPortrait]) {
           this.isHandsetPortrait = true;
-          console.log('%c⧭', 'color: #731d1d', 'this.isHandsetPortrait');
         } else if (breakpoints[Breakpoints.HandsetLandscape]) {
           this.isHandsetLandscape = true;
-          console.log('%c⧭', 'color: #807160', 'this.isHandsetLandscape');
         }
       });
   }

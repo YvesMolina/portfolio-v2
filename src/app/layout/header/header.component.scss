@@ -1,5 +1,5 @@
 .toolbar {
-  z-index: 4;
+  z-index: 9;
   background-color: transparent;
   opacity: 0;
   padding: 50px 25px;
@@ -58,27 +58,27 @@
 .toolbar-background {
   opacity: 0;
   position: fixed;
-  top: -100dvh; /* Move the background above the viewport initially */
+  top: -100dvh;
   left: 0;
   width: 100%;
-  height: 100dvh; /* Adjust the height based on your toolbar height */
+  height: 100dvh;
   background-color: rgba(43, 43, 43, 0.7);
-  z-index: 3; /* Make sure the background is behind the toolbar (z-index: 9) */
+  z-index: 8;
   transition: transform 500ms cubic-bezier(0.62, 0, 0.37, 0.95);
-  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+  backdrop-filter: blur(10px);
   animation: fadeIn 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 3s forwards;
 }
 
 .show-background {
   transform: translateY(
     99px
-  ); /* Slide the background down by the height of the toolbar */
+  );
 }
 
 .show-full-background {
   transform: translateY(
     100dvh
-  ); /* Slide the background down by the height of the toolbar */
+  );
 }
 .icon {
   color: white;

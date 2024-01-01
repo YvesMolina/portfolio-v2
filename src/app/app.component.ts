@@ -12,7 +12,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio-v2';
+  title = 'Yves Molina';
   constructor(private titleService: Title) {
     this.titleService.setTitle($localize`${this.title}`)
   }
