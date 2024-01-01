@@ -48,16 +48,6 @@ export class ProjectsComponent {
       });
   }
 
-  @HostListener('wheel', ['$event'])
-  onWheel(event: WheelEvent) {
-    if (event.deltaY < 0) {
-      this.scrollToComponent('about');
-    }
-    if (event.deltaY > 0) {
-      this.scrollToComponent('contact');
-    }
-  }
-
   scrollToComponent(component: string) {
     const element = document.getElementById(component);
     if (element) {

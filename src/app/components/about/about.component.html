@@ -1,7 +1,40 @@
-<div id="about" class="container">
-  <div class="left-content">
-    <div class="title" i18n>À PROPOS DE MOI</div>
-    <div class="subtitle" i18n>
+<div
+  id="about"
+  class="container"
+  [ngClass]="{ 'container-portrait': isHandsetPortrait || isTabletPortrait }"
+>
+  <div
+    class="left-content"
+    [ngClass]="{
+      'left-content-tablet-portrait': isTabletPortrait,
+      'left-content-tablet-landscape': isTabletLandscape,
+      'left-content-handset-portrait': isHandsetPortrait,
+      'left-content-handset-landscape': isHandsetLandscape
+    }"
+  >
+    <div
+      class="title"
+      [ngClass]="{
+        'title-tablet-portrait': isTabletPortrait,
+        'title-tablet-landscape': isTabletLandscape,
+        'title-handset-portrait': isHandsetPortrait,
+        'title-handset-landscape': isHandsetLandscape
+      }"
+      i18n
+    >
+      À PROPOS DE MOI
+    </div>
+
+    <div
+      class="subtitle"
+      [ngClass]="{
+        'subtitle-tablet-portrait': isTabletPortrait,
+        'subtitle-tablet-landscape': isTabletLandscape,
+        'subtitle-handset-portrait': isHandsetPortrait,
+        'subtitle-handset-landscape': isHandsetLandscape
+      }"
+      i18n
+    >
       Je suis un &nbsp;
       <div class="accent">Ingénieur Logiciel</div>
       , &nbsp;
@@ -9,7 +42,17 @@
       &nbsp; et &nbsp;
       <div class="accent">Expert Angular</div>
     </div>
-    <div class="description" i18n>
+
+    <div
+      class="description"
+      [ngClass]="{
+        'description-tablet-portrait': isTabletPortrait,
+        'description-tablet-landscape': isTabletLandscape,
+        'description-handset-portrait': isHandsetPortrait,
+        'description-handset-landscape': isHandsetLandscape
+      }"
+      i18n
+    >
       Diplômé d'un Master en Génie Informatique en 2024, j'apporte deux années
       d'expérience pratique en tant que développeur web chez <b>Capgemini</b>.
       Pendant cette période, j'ai travaillé en tant que
@@ -26,40 +69,55 @@
       l'application pratique de mes compétences.
     </div>
   </div>
-  <div class="right-content">
-    <div>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/512px-Angular_full_color_logo.svg.png"
-        alt="Angular logo"
-      />
+  <div
+    class="right-content"
+    [ngClass]="{
+      'right-content-tablet-portrait': isTabletPortrait,
+      'right-content-handset-portrait': isHandsetPortrait,
+    }"
+  >
+    <div class="logos">
+      <div>
+        <img
+          src="https://i.ibb.co/zVYK23z/Angular-full-color-logo-svg.png"
+          alt="Angular logo"
+        />
+      </div>
+      <div>
+        <img
+          class="img-2"
+          src="https://i.ibb.co/ckDzm54/Node-js-logo.png"
+          alt="Nodejs logo"
+        />
+      </div>
+      <div>
+        <img
+          class="img-3"
+          src="https://i.ibb.co/j6RBvH5/Kubernetes-logo-without-workmark-svg.png"
+          alt="Kubernetes logo"
+        />
+      </div>
+      <div>
+        <img
+          class="img-4"
+          src="https://i.ibb.co/jfY6s9j/Docker-container-engine-logo-cropped.png"
+          alt="Docker logo"
+        />
+      </div>
+      <div>
+        <img
+          class="img-5"
+          src="https://i.ibb.co/4mkJ40d/Typescript-svg.png"
+          alt="Typescript logo"
+        />
+      </div>
     </div>
-    <div>
-      <img
-        class="img-2"
-        src="https://companieslogo.com/img/orig/CAP.PA-9b4110b0.png?t=1651902188"
-        alt="Capgemini logo"
-      />
-    </div>
-    <div>
-      <img
-        class="img-3"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/2109px-Kubernetes_logo_without_workmark.svg.png"
-        alt="Kubernetes logo"
-      />
-    </div>
-    <div>
-      <img
-        class="img-4"
-        src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Docker_%28container_engine%29_logo_%28cropped%29.png"
-        alt="Docker logo"
-      />
-    </div>
-    <div>
-      <img
-        class="img-5"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/2048px-Typescript.svg.png"
-        alt="Typescript logo"
-      />
-    </div>
+  </div>
+</div>
+<div class="arrow" (click)="scrollToComponent('projects')">
+  <div class="arrows">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </div>

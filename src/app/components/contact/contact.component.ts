@@ -77,13 +77,6 @@ export class ContactComponent {
     message: new FormControl('', [Validators.required]),
   });
 
-  @HostListener('wheel', ['$event'])
-  onWheel(event: WheelEvent) {
-    if (event.deltaY < 0) {
-      this.scrollToComponent('projects');
-    }
-  }
-
   scrollToComponent(component: string) {
     const element = document.getElementById(component);
     if (element) {

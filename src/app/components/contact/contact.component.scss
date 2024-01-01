@@ -7,7 +7,7 @@
 }
 
 .content {
-  padding: 90px;
+  padding: 130px 25px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,14 +21,41 @@
 
   .main-title {
     font-size: 45px;
+    letter-spacing: 3px;
     font-weight: 700;
     color: var(--gray-900);
     margin-bottom: 40px;
   }
 
+  .main-title-tablet-landscape {
+  }
+  .main-title-handset-landscape {
+  }
+  .main-title-tablet-portrait {
+    font-size: 40px;
+  }
+  .main-title-handset-portrait {
+    font-size: 35px;
+  }
+
   .sub-title {
+    line-height: 32px;
     font-size: 30px;
     font-weight: 300;
+    text-align: center;
+  }
+
+  .sub-title-tablet-landscape {
+  }
+  .sub-title-handset-landscape {
+  }
+  .sub-title-tablet-portrait {
+    line-height: 32px;
+    font-size: 26px;
+  }
+  .sub-title-handset-portrait {
+    line-height: 32px;
+    font-size: 20px;
   }
 }
 
@@ -42,9 +69,24 @@
     justify-content: space-between;
     margin-bottom: 10px;
   }
+
+  .contact-info-portrait {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .contact-input {
     width: 45%;
   }
+
+  .contact-input-portrait {
+    width: 100%;
+  }
+}
+
+.form-portrait {
+  width: 75dvw;
 }
 
 .text-area {
@@ -64,4 +106,8 @@
     font-size: 30px;
     font-weight: 300;
   }
+}
+
+.send-button-portrait {
+  width: 50dvw;
 }

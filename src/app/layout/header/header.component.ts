@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { MatIconModule } from '@angular/material/icon';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-header',
@@ -44,6 +50,21 @@ export class HeaderComponent {
 
   constructor(private responsive: BreakpointObserver) {}
 
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollPosition =
+      window.scrollY ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+
+    console.log('%c⧭', 'color: #bfffc8', scrollPosition);
+    // Define the scroll threshold to show/hide the background
+    const scrollThreshold = 200;
+
+    this.isBackgroundVisible = scrollPosition > scrollThreshold;
+  }
+
   ngOnInit() {
     this.responsive
       .observe([
@@ -61,12 +82,14 @@ export class HeaderComponent {
         this.isHandsetLandscape = false;
 
         if (breakpoints[Breakpoints.TabletPortrait]) {
+          this.isBackgroundVisible = true;
           this.isTabletPortrait = true;
           console.log('%c⧭', 'color: #1d5673', 'this.isTabletPortrait');
         } else if (breakpoints[Breakpoints.TabletLandscape]) {
           this.isTabletLandscape = true;
           console.log('%c⧭', 'color: #f200e2', 'this.isTabletLandscape');
         } else if (breakpoints[Breakpoints.HandsetPortrait]) {
+          this.isBackgroundVisible = true;
           this.isHandsetPortrait = true;
           console.log('%c⧭', 'color: #731d1d', 'this.isHandsetPortrait');
         } else if (breakpoints[Breakpoints.HandsetLandscape]) {

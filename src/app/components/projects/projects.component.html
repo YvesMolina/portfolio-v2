@@ -1,21 +1,67 @@
 <div id="projects" class="container">
-  <div class="title" i18n>PROJETS</div>
+  <div
+    [ngClass]="{
+      'title-tablet-portrait': isTabletPortrait,
+      'title-tablet-landscape': isTabletLandscape,
+      'title-handset-portrait': isHandsetPortrait,
+      'title-handset-landscape': isHandsetLandscape
+    }"
+    class="title"
+    i18n
+  >
+    PROJETS
+  </div>
   <div class="description" i18n>
     Sites web et applications que j'ai réalisés précédemment
   </div>
   <div class="content">
     <div class="row-wrap">
-      <div class="flex" *ngFor="let card of cards">
+      <div
+        [ngClass]="{
+          'flex-tablet-portrait': isTabletPortrait,
+          'flex-tablet-landscape': isTabletLandscape,
+          'flex-handset-portrait': isHandsetPortrait,
+          'flex-handset-landscape': isHandsetLandscape
+        }"
+        class="flex"
+        *ngFor="let card of cards"
+      >
         <mat-card class="card">
           <img mat-card-image class="card-img" [src]="card.url" />
           <mat-card-content class="card-content">
-            <div class="card-title">{{ card.title }}</div>
-            <a mat-button class="card-project-url" [href]="card.projectUrl">{{
-              card.shortProjectUrl
-            }}</a>
+            <div
+              [ngClass]="{
+                'card-title-tablet-portrait': isTabletPortrait,
+                'card-title-tablet-landscape': isTabletLandscape,
+                'card-title-handset-portrait': isHandsetPortrait,
+                'card-title-handset-landscape': isHandsetLandscape
+              }"
+              class="card-title"
+            >
+              {{ card.title }}
+            </div>
+            <a
+              [ngClass]="{
+                'card-project-url-tablet-portrait': isTabletPortrait,
+                'card-project-url-tablet-landscape': isTabletLandscape,
+                'card-project-url-handset-portrait': isHandsetPortrait,
+                'card-project-url-handset-landscape': isHandsetLandscape
+              }"
+              mat-button
+              class="card-project-url"
+              [href]="card.projectUrl"
+              >{{ card.shortProjectUrl }}</a
+            >
           </mat-card-content>
         </mat-card>
       </div>
+    </div>
+  </div>
+  <div class="arrow" (click)="scrollToComponent('contact')">
+    <div class="arrows">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </div>
 </div>
