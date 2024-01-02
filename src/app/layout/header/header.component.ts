@@ -58,11 +58,10 @@ export class HeaderComponent {
       document.body.scrollTop ||
       0;
 
-    console.log('%c⧭', 'color: #bfffc8', scrollPosition);
-    // Define the scroll threshold to show/hide the background
     const scrollThreshold = 200;
-
-    this.isBackgroundVisible = scrollPosition > scrollThreshold;
+    if (!this.isTabletPortrait && !this.isHandsetPortrait) {
+      this.isBackgroundVisible = scrollPosition > scrollThreshold;
+    }
   }
 
   ngOnInit() {
@@ -84,17 +83,13 @@ export class HeaderComponent {
         if (breakpoints[Breakpoints.TabletPortrait]) {
           this.isBackgroundVisible = true;
           this.isTabletPortrait = true;
-          console.log('%c⧭', 'color: #1d5673', 'this.isTabletPortrait');
         } else if (breakpoints[Breakpoints.TabletLandscape]) {
           this.isTabletLandscape = true;
-          console.log('%c⧭', 'color: #f200e2', 'this.isTabletLandscape');
         } else if (breakpoints[Breakpoints.HandsetPortrait]) {
           this.isBackgroundVisible = true;
           this.isHandsetPortrait = true;
-          console.log('%c⧭', 'color: #731d1d', 'this.isHandsetPortrait');
         } else if (breakpoints[Breakpoints.HandsetLandscape]) {
           this.isHandsetLandscape = true;
-          console.log('%c⧭', 'color: #807160', 'this.isHandsetLandscape');
         }
       });
   }
