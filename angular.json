@@ -4,12 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "portfolio-v2": {
-      "i18n": {
-        "sourceLocale": "fr-FR",
-        "locales": {
-          "en-US": "src/locale/messages.en.xlf"
-        }
-      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
