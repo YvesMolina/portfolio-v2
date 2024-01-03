@@ -181,10 +181,11 @@
     margin: 50px 0;
     img {
       width: 80px;
-      animation: appear 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards,
-        floatSmall 8750ms cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+      animation: floatSmall 8750ms cubic-bezier(0.455, 0.03, 0.515, 0.955)
+        infinite;
     }
     div {
+      animation: appear 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
       left: -22px;
       top: -22px;
     }
@@ -205,6 +206,7 @@
   div {
     display: flex;
     align-items: center;
+    animation: appear 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
   }
   img {
     opacity: 0;
